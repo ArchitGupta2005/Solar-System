@@ -1,0 +1,124 @@
+/* Importing Orbitron font for a futuristic look */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+/* Base styles for the body */
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #000; /* Black background for space effect */
+  font-family: 'Orbitron', sans-serif; /* Futuristic font */
+  color: #fff; /* White text */
+}
+
+/* Control panel container */
+#controls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6); /* Transparent background */
+  border-radius: 16px; /* Rounded corners */
+  backdrop-filter: blur(10px); /* Glass blur effect */
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.15); /* Soft green glow */
+  max-height: 90vh; /* Scrollable height */
+  overflow-y: auto; /* Scroll inside if needed */
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Soft border */
+}
+
+/* Heading inside the control panel */
+#controls h1 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #00ff99; /* Neon green title */
+}
+
+/* Style for buttons (Pause / Toggle Theme) */
+button {
+  padding: 6px 12px;
+  margin: 5px 5px 15px 0;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #111; /* Dark background */
+  color: #00ff99; /* Neon green text */
+  border: 1px solid #00ff99; /* Neon green border */
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+/* Hover effect for buttons */
+button:hover {
+  background: #00ff99; /* Inverted background */
+  color: #000; /* Black text on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Container for each planet's slider */
+.slider-container {
+  margin-bottom: 16px;
+}
+
+/* Label text above each slider */
+label {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 4px;
+  color: #ccc; /* Light gray label */
+}
+
+/* Slider track */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 160px;
+  height: 6px;
+  background: #111; /* Dark background */
+  border-radius: 6px;
+  outline: none;
+}
+
+/* Slider thumb (the handle you drag) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #00ff99; /* Neon green */
+  cursor: pointer;
+  box-shadow: 0 0 5px #00ff99; /* Glow effect */
+  transition: background 0.3s;
+}
+
+/* Hover effect for slider thumb */
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #00ffaa; /* Slightly different green on hover */
+}
+
+/* Tooltip that appears when hovering over planets */
+#tooltip {
+  position: absolute;
+  display: none;
+  background: #222;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 2;
+  pointer-events: none; /* Prevent interference with mouse */
+}
+
+/* Info box for fun facts when a planet is clicked */
+#planet-info {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(0,0,0,0.7);
+  padding: 12px;
+  border-radius: 8px;
+  display: none;
+  z-index: 2;
+  color: #00ff99; /* Neon green text */
+  font-size: 14px;
+  border: 1px solid #00ff99; /* Green border */
+}
